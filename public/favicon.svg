@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Dark background circle -->
+  <circle cx="32" cy="32" r="32" fill="#060614"/>
+
+  <!-- Neon glow filter -->
+  <defs>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Static platform (bottom) — cyan -->
+  <rect x="10" y="50" width="44" height="8" rx="4" fill="#00ffcc" filter="url(#glow)" opacity="0.95"/>
+
+  <!-- Moving platform (middle) — blue -->
+  <rect x="16" y="35" width="36" height="7" rx="3.5" fill="#4499ff" filter="url(#glow)" opacity="0.9"/>
+
+  <!-- Spring platform (upper-mid) — yellow -->
+  <rect x="22" y="22" width="28" height="7" rx="3.5" fill="#ffee22" filter="url(#glow)" opacity="0.85"/>
+
+  <!-- Player body — lime green rounded rect -->
+  <rect x="24" y="6" width="16" height="17" rx="6" fill="#44ff66" filter="url(#glow)"/>
+
+  <!-- Player eyes -->
+  <circle cx="28.5" cy="12" r="3" fill="white"/>
+  <circle cx="35.5" cy="12" r="3" fill="white"/>
+  <circle cx="29.5" cy="13" r="1.5" fill="#003300"/>
+  <circle cx="36.5" cy="13" r="1.5" fill="#003300"/>
+
+  <!-- Player smile -->
+  <path d="M28 18 Q32 21 36 18" stroke="#003300" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>
